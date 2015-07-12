@@ -1,0 +1,27 @@
+{
+  "name": "angular-registration-login-example",
+  "version": "0.0.1",
+  "description": "A sample application with forms authentication + cookie support",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm update",
+    "postinstall": "bower update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhrubach/angular-registration-login-example.git"
+  },
+  "keywords": [
+    "angular",
+    "authentication",
+    "cookie storage"
+  ],
+  "author": "Jason Watmore",
+  "contributors":  "Dhruba Chatterjee",
+    "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhrubach/angular-registration-login-example/issues"
+  },
+  "homepage": "https://github.com/dhrubach/angular-registration-login-example#readme"
+}

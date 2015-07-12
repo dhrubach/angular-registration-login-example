@@ -1,0 +1,21 @@
+{
+  "name": "angular-registration-login-example",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dhrubach/angular-registration-login-example",
+  "description": "A sample application with forms authentication + cookie support",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+    "jquery": "^2.1.x",
+    "angular": "^1.4.x",
+    "angular-route": "^1.4.x",
+    "angular-cookies": "^1.4.x"
+  }
+}
