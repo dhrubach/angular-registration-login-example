@@ -6,24 +6,24 @@
         .config(config)
         .run(run);
 
-    config.$inject = ['$routeProvider', '$locationProvider'];
-    function config($routeProvider, $locationProvider) {
+    config.$inject = ['$routeProvider'];
+    function config($routeProvider) {
         $routeProvider
             .when('/', {
                 controller: 'HomeController',
-                templateUrl: 'home/home.view.html',
+                templateUrl: 'src/home/home.view.html',
                 controllerAs: 'vm'
             })
 
             .when('/login', {
                 controller: 'LoginController',
-                templateUrl: 'login/login.view.html',
+                templateUrl: 'src/login/login.view.html',
                 controllerAs: 'vm'
             })
 
             .when('/register', {
                 controller: 'RegisterController',
-                templateUrl: 'register/register.view.html',
+                templateUrl: 'src/register/register.view.html',
                 controllerAs: 'vm'
             })
 
@@ -34,6 +34,7 @@
     function run($rootScope, $location, $cookieStore, $http) {
         // keep user logged in after page refresh
         $rootScope.globals = $cookieStore.get('globals') || {};
+
         if ($rootScope.globals.currentUser) {
             $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
         }
@@ -47,5 +48,4 @@
             }
         });
     }
-
 })();

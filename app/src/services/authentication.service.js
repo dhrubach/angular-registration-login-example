@@ -6,6 +6,7 @@
         .factory('AuthenticationService', AuthenticationService);
 
     AuthenticationService.$inject = ['$http', '$cookieStore', '$rootScope', '$timeout', 'UserService'];
+
     function AuthenticationService($http, $cookieStore, $rootScope, $timeout, UserService) {
         var service = {};
 
@@ -52,6 +53,7 @@
             };
 
             $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata; // jshint ignore:line
+
             $cookieStore.put('globals', $rootScope.globals);
         }
 
